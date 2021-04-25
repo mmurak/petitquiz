@@ -41,16 +41,16 @@ function showQuestion() {
   process(text);
 
   if (getParm("test") != "yes")
-    openPage(data["data"][qsidx]["qurl"]);
+    openPage(data["data"][qsidx]["qurl"], "question");
 }
 
 function showAnswer() {
   var qsidx = document.getElementById("quizSelector").value;
-  openPage(data["data"][qsidx]["aurl"]);
+  openPage(data["data"][qsidx]["aurl"], "commentary");
 }
 
-function openPage(url) {
-  window.open(url, "", "width=600,height=600");
+function openPage(url, wname) {
+  window.open(url, wname, "width=600,height=600");
 }
 
 
